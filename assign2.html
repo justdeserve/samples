@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <style>
+            body{
+                display:grid;
+    justify-content:center;
+    
+            }
+            h1{
+                text-align:center;
+                text-transform: uppercase;
+            }
+            p{
+                font-size: 30px;
+            }
+input{
+    padding:10px;
+    font-size:medium;
+    display:grid;
+    justify-content:center;
+    grid-template-columns:50px 50px 50px 50px;
+    
+}
+button{
+    display:grid;
+    margin-top:30px;
+    margin-left:50px;
+    width:100px;
+    border-radius:5px;
+}
+p{
+    font-weight:bold;
+    text-align:center;
+}
+        </style>
+    </head>
+    <body>
+        <input type="text" id="sen" placeholder="enter a string value">
+        <input type="text" id="word" placeholder="enter a word">
+        <button type="button" onclick="check()">check</button>
+        <h1>result:</h1>
+        <p id="demo"></p>
+        <script>
+             function check(){   
+                var str=document.getElementById("sen").value;
+                var str2=document.getElementById("word").value;
+   result= str.slice(str.indexOf(str2)+str2.length);
+
+document.getElementById("demo").innerHTML=result;
+             }
+          
+            
+        </script>
+    </body>
+</html>
