@@ -1,0 +1,124 @@
+body{
+   
+    background:linear-gradient(90deg,#e4dbdb,rgb(243, 178, 132));
+    width:100%;
+    min-height:100vh;
+    overflow:hidden;  
+}
+section{
+    position:absolute;
+    width: 100%;
+    height:100%;
+    transform-style:preserve-3d;
+    transform:perspective(1000px);
+}
+section:before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    border-top:100vh solid transparent;
+    border-left:100vh solid transparent;
+    opacity:0.1;
+}
+section:after{
+    content:'';
+    position:relative;
+    top:0;
+    right:0;
+    border-top:100vh solid transparent;
+    border-right:100vh solid transparent;
+    opacity:0.1;
+}
+div{
+    position:absolute;
+    background:rgb(168, 35, 35);
+    transform-style:preserve-3d;
+    width:150px;
+    height:100px;
+    left:100px;
+    top:100px;
+    animation-name:animate;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+}
+div:nth-child(1){
+    left:1000px;
+    width:50px;
+    height:52px;
+    animation-duration:2s;
+}
+div:nth-child(2){
+    right:1000px;
+    width:150px;
+    height:100px;
+    animation-duration:10s;
+
+}
+div:nth-child(3){
+    right:300px;
+    width:150px;
+    height:100px;
+    animation-duration:15s;
+
+}
+div:nth-child(4){
+    left:1400px;
+    width:150px;
+    height:100px;
+    animation-duration:10s;
+}
+div:nth-child(5){
+    left:650px;
+    width:50px;
+    height:52px;
+    animation-duration:30s;
+}
+div:nth-child(6){
+    right:900px;
+    width:50px;
+    height:52px;
+    animation-duration:3s;
+}
+div:nth-child(7){
+    left:880px;
+    width:50px;
+    height:52px;
+    animation-duration:4s;
+}
+
+
+div:before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    display:block;
+    width:100%;
+    height:100%;
+    background:rgb(170, 18, 18);
+}
+div:after{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    display:block;
+    width:100%;
+    height:100%;
+    background:rgb(185, 26, 26);
+    background:black;
+    transform:rotatey(90deg);
+
+}
+
+
+@keyframes animate
+{
+    0%{
+        transform:rotatey(0deg) translatey(110vh);
+    }
+    100%{
+        transform:rotatey(360deg) translatey(-20vh);
+    }
+}
